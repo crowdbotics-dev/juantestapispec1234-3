@@ -8,3 +8,6 @@ class Rojo(models.Model):
     name = models.BigIntegerField()
     value2 = models.BigIntegerField()
     valuew = models.BigIntegerField()
+class Stanley(models.Model):
+    'Generated Model'
+    mate = models.EmailField(max_length=254,)

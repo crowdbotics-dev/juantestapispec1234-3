@@ -1,6 +1,6 @@
 from rest_framework import viewsets
-from home.models import NewMo,Rojo
-from .serializers import NewMoSerializer,RojoSerializer
+from home.models import NewMo,Rojo,Stanley
+from .serializers import NewMoSerializer,RojoSerializer,StanleySerializer
 from rest_framework import authentication
 from rest_framework.authtoken.serializers import AuthTokenSerializer
 from rest_framework.viewsets import ModelViewSet, ViewSet
@@ -42,3 +42,8 @@ class RojoViewSet(viewsets.ModelViewSet):
     serializer_class = RojoSerializer
     authentication_classes = (authentication.SessionAuthentication, authentication.TokenAuthentication)
     queryset = Rojo.objects.all()
+
+class StanleyViewSet(viewsets.ModelViewSet):
+    serializer_class = StanleySerializer
+    authentication_classes = (authentication.SessionAuthentication, authentication.TokenAuthentication)
+    queryset = Stanley.objects.all()
